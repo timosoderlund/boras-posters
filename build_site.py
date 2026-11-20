@@ -428,6 +428,7 @@ def build_index_html(posters: list[dict]) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="1sGtVvRS997PubTEtp1xxuXLRrDvLaDhdALp4ERRA-Q">
   <title>{html.escape(SITE_TITLE)} — Fine Art Posters from Borås, Sweden</title>
   <meta name="description" content="{html.escape(SITE_DESCRIPTION)}">
   <link rel="canonical" href="{html.escape(canonical)}">
