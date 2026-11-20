@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://timosoderlund.github.io/boras-posters/sitemap.xml

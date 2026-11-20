@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://timosoderlund.github.io/boras-posters/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://timosoderlund.github.io/boras-posters/posters/bodhi-viskan.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <image:image>
+      <image:loc>https://timosoderlund.github.io/boras-posters/images/boras-poster-bodhi-viskan.webp</image:loc>
+      <image:title>Bodhi · Viskan — Borås, Sweden Poster</image:title>
+      <image:caption>Fine art photography poster of the Bodhi bronze sculpture in morning mist along the Viskan river in Borås, Sweden, by Timo T Söderlund.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://timosoderlund.github.io/boras-posters/posters/viskaholm-caroli-kyrka.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <image:image>
+      <image:loc>https://timosoderlund.github.io/boras-posters/images/boras-poster-viskaholm-caroli-kyrka.webp</image:loc>
+      <image:title>Viskaholm · Caroli Kyrka — Borås, Sweden Poster</image:title>
+      <image:caption>Fine art photography poster of Viskaholm historic textile mills and Caroli Church spire reflected in the Viskan river at dusk in Borås, Sweden, by Timo T Söderlund.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://timosoderlund.github.io/boras-posters/posters/osterlanggatan.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <image:image>
+      <image:loc>https://timosoderlund.github.io/boras-posters/images/boras-poster-osterlanggatan.webp</image:loc>
+      <image:title>Österlånggatan — Borås, Sweden Poster</image:title>
+      <image:caption>Fine art photography poster of historic stone facades and evening light along Österlånggatan in Borås, Sweden, by Timo T Söderlund.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://timosoderlund.github.io/boras-posters/posters/pinocchio.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <image:image>
+      <image:loc>https://timosoderlund.github.io/boras-posters/images/boras-poster-pinocchio.webp</image:loc>
+      <image:title>Pinocchio — Borås, Sweden Poster</image:title>
+      <image:caption>Fine art photography poster of Jim Dine&#x27;s Walking to Borås Pinocchio bronze sculpture in Borås, Sweden, by Timo T Söderlund.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://timosoderlund.github.io/boras-posters/posters/viskan-dawn.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <image:image>
+      <image:loc>https://timosoderlund.github.io/boras-posters/images/boras-poster-viskan-dawn.webp</image:loc>
+      <image:title>Viskan · Dawn — Borås, Sweden Poster</image:title>
+      <image:caption>Fine art photography poster of golden dawn clouds and reflections over the Viskan river in Borås, Sweden, by Timo T Söderlund.</image:caption>
+    </image:image>
+  </url>
+</urlset>
