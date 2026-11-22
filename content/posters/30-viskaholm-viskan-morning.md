@@ -1,6 +1,6 @@
 ---
 slug: viskaholm-viskan-morning
-title: Viskaholm · Viskan
+title: Viskaholm · Viskan (Sunrise)
 subtitle: Golden Sunrise & Historic Viskaholm · Central Borås, Sweden
 image: boras-poster-viskaholm-viskan-morning.webp
 year: 2026
