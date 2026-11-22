@@ -195,6 +195,27 @@ a {
   border-top: 1px solid var(--line);
 }
 
+.poster-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.poster-nav a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.poster-nav-next {
+  text-align: right;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 2rem 1.5rem;

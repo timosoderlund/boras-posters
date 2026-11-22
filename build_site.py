@@ -371,6 +371,27 @@ a {
   border-top: 1px solid var(--line);
 }
 
+.poster-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.poster-nav a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.poster-nav-next {
+  text-align: right;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 2rem 1.5rem;
@@ -464,10 +485,24 @@ def build_index_html(posters: list[dict]) -> str:
 """
 
 
-def build_poster_html(poster: dict) -> str:
+def build_poster_html(
+    poster: dict,
+    prev_poster: dict | None = None,
+    next_poster: dict | None = None,
+) -> str:
     page_url = f"{BASE_URL}/posters/{poster['slug']}.html"
     img_url = f"{BASE_URL}/images/{poster['image']}"
     page_title = f"{poster['title']} — Borås, Sweden Poster | {SITE_TITLE}"
+    prev_link = (
+        f'<a class="poster-nav-prev" href="{html.escape(prev_poster["slug"])}.html">← {html.escape(prev_poster["title"])}</a>'
+        if prev_poster
+        else "<span></span>"
+    )
+    next_link = (
+        f'<a class="poster-nav-next" href="{html.escape(next_poster["slug"])}.html">{html.escape(next_poster["title"])} →</a>'
+        if next_poster
+        else "<span></span>"
+    )
 
     schema = [
         {
@@ -569,6 +604,12 @@ def build_poster_html(poster: dict) -> str:
         </p>
       </div>
     </article>
+
+    <nav class="poster-nav" aria-label="Poster Navigation">
+      {prev_link}
+      <a href="../index.html">All Borås Posters</a>
+      {next_link}
+    </nav>
   </main>
 
   <footer class="site-footer">
@@ -590,16 +631,12 @@ def build_sitemap(posters: list[dict]) -> str:
     for p in posters:
         page_url = html.escape(f"{BASE_URL}/posters/{p['slug']}.html")
         img_url = html.escape(f"{BASE_URL}/images/{p['image']}")
-        img_title = html.escape(f"{p['title']} — Borås, Sweden Poster")
-        img_caption = html.escape(p["alt"])
         urls.append(
             f"""  <url>
     <loc>{page_url}</loc>
     <lastmod>{today}</lastmod>
     <image:image>
       <image:loc>{img_url}</image:loc>
-      <image:title>{img_title}</image:title>
-      <image:caption>{img_caption}</image:caption>
     </image:image>
   </url>"""
         )
@@ -635,10 +672,12 @@ def main() -> None:
     (DOCS_DIR / "sitemap.xml").write_text(build_sitemap(posters), encoding="utf-8")
     (DOCS_DIR / "robots.txt").write_text(build_robots_txt(), encoding="utf-8")
 
-    for p in posters:
+    for idx, p in enumerate(posters):
         shutil.copy2(p["source_image"], DOCS_IMAGES_DIR / p["image"])
+        prev_p = posters[idx - 1] if idx > 0 else posters[-1]
+        next_p = posters[idx + 1] if idx < len(posters) - 1 else posters[0]
         (DOCS_POSTERS_DIR / f"{p['slug']}.html").write_text(
-            build_poster_html(p), encoding="utf-8"
+            build_poster_html(p, prev_p, next_p), encoding="utf-8"
         )
 
     print(f"PRE-FLIGHT OK: Built {len(posters)} posters into {DOCS_DIR}")
